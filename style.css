@@ -1,0 +1,232 @@
+:root {
+    --primaryAccent: #1155cc;
+    --secondaryAccent: #e06666;
+    --accentText: white;
+    --grey: #ebebeb;
+    --borderRadius: 10px;
+    --shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.3);
+    --shadowPressed: 5px 5px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+}
+
+header .tagline {
+    height: 50px;
+}
+
+main {
+    padding-top: 80px;
+}
+
+section {
+    padding: 10px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+section.headline {
+    background-color: var(--grey);
+}
+
+img.badge {
+    position: relative;
+    top: -5px;
+    left: -5px;
+    width: 50%;
+    border-radius: var(--borderRadius);
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.5s, top 0.5s, left 0.5s;
+}
+
+img.badge:hover {
+    top: -2.5px;
+    left: -2.5px;
+    box-shadow: var(--shadowPressed)
+}
+
+p.inlineToLabels {
+    padding: 10px;
+}
+
+div.actions {
+    padding: 15px;
+}
+
+div.dialogBackground {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+div.dialog {
+    position: fixed;
+    display: none;
+    top: 100vh;
+    left: 25vw;
+    width: 50vw;
+    height: 80vh;
+    background-color: white;
+    border-radius: var(--borderRadius);
+    z-index: 1;
+    transition: top 1s;
+}
+
+div.dialog.open {
+    top: 10vh;
+}
+
+div.dialog div.header {
+    width: calc(100% - 20px);
+    height: 30px;
+    padding: 10px;
+    background-color: var(--primaryAccent);
+    color: var(--accentText);
+    border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div.dialog div.header button {
+    float: right;
+    padding: 0;
+    font-size: 25px;
+}
+
+div.dialog div.content {
+    width: calc(100% - 20px);
+    height: calc(100% - 160px);
+    padding: 10px;
+    overflow: auto;
+}
+
+div.dialog div.buttons {
+    width: calc(100% - 30px);
+    height: 30px;
+    padding: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 0 0 var(--borderRadius) var(--borderRadius);
+}
+
+div.dialog div.buttons button {
+    min-width: 25%;
+}
+
+button {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 15px;
+    background-color: var(--primaryAccent);
+    color: var(--accentText);
+    border: none;
+    border-radius: var(--borderRadius);
+    font-size: 15px;
+    cursor: pointer;
+    transition: 1s transform;
+}
+
+button:hover {
+    transform: scale(0.95);
+}
+
+button.secondary {
+    background-color: var(--secondaryAccent);
+}
+
+button.bad {
+    background-color: var(--grey);
+    color: black;
+}
+
+label {
+    display: inline-block;
+    width: calc(50% - 10px);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+input, select {
+    margin: 10px;
+    padding: 15px;
+    width: calc(50% - 70px);
+    background-color: var(--grey);
+    border: none;
+    border-radius: var(--borderRadius);
+    font-size: 15px;
+}
+
+select {
+    width: calc(50% - 40px);
+}
+
+.left {
+    text-align: start;
+}
+
+.middle {
+    text-align: center;
+}
+
+.right {
+    text-align: end;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.material-icons {
+    font-size: inherit!important;
+}
+
+@media (max-width: 900px) {
+    div.dialog {
+        left: 15vw;
+        width: 70vw;
+    }
+}
+
+@media (max-width: 600px) {
+    div.dialog {
+        left: 5vw;
+        width: 90vw;
+    }
+}
+
+@media (max-width: 500px) {
+    img.badge {
+        width: 80%;
+    }
+
+    label {
+        width: calc(100% - 20px);
+    }
+
+    input {
+        width: calc(100% - 50px);
+    }
+
+    select {
+        width: calc(100% - 20px);
+    }
+}

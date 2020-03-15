@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>GiveMeDistance.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=yes, minimal-ui">
+        <meta name="theme-color" content="#1155cc">
+        <meta name="description" content="Print off a badge that'll make people aware that you are in a vulnerable group and require social distancing.">
+        <link rel="shortcut icon" href="media/logo.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Material+Icons&display=swap">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="/"><img src="media/tagline.svg" alt="GiveMeDistance.com" class="tagline" /></a>
+        </header>
+        <main>
+            <section class="headline middle">
+                <h1>In a vulnerable group? Make others aware by wearing this badge</h1>
+                <img src="media/badge.svg" alt="I'm part of a VULNERABLE GROUP! Please givemedistance.com" class="badge" />
+                <div class="actions">
+                    <button onclick="openPrintDialog();">Print it off now</button>
+                </div>
+            </section>
+            <div class="dialogBackground" onclick="closePrintDialog();"></div>
+            <div class="dialog" id="printDialog">
+                <div class="header">
+                    Print badges
+                    <button onclick="closePrintDialog();"><i class="material-icons" aria-label="Close dialog">close</i></button po>
+                </div>
+                <div class="content">
+                    <label for="quantity">Number of badges to print off</label> <input type="number" value="1" min="1" max="100" step="1" id="quantity">
+                    <label for="size">Badge size</label> <select id="size">
+                        <option value="default" selected>In corner of A4 paper</option>
+                        <option value="a-63.5x46.6">Avery&reg; 63.5 x 46.6 mm (18 per sheet)</option>
+                    </select>
+                    <label for="colour">Colour mode</label> <select id="colour">
+                        <option value="colour">Full colour</option>
+                        <option value="monochrome">Monochrome (black ink only)</option v>
+                    </select>
+                </div>
+                <div class="buttons right">
+                    <button class="bad" onclick="closePrintDialog();">Cancel</button>
+                    <button class="secondary" onclick="startPrinting();">Print</button>
+                </div>
+            </div>
+            <section>
+                <h2>Why have awareness badges for vulnerable people?</h2>
+                <p>
+                    The government has not yet asked people from vulnerable groups
+                    (people with underlying health conditions such as diabetes, asthma and
+                    heart problems, and the over 70's) to self-isolate. However, we feel
+                    concerned about our relatives ─ who are part of this vulnerable group ─
+                    especially when they are out in public, whether that's at work or school,
+                    or just popping to the shop, so we thought an awareness badge may be
+                    of help.
+                </p>
+                <p>
+                    Inspired by the Transport for London's 'Baby on board' badges that
+                    make people aware when a pregnant women is travelling on a tube, we
+                    came up with the idea of wearing a badge that informs the public they
+                    are part of a vulnerable group, meaning they have a higher chance of
+                    developing severe illness if coronavirus is contracted, compared to the
+                    rest of the population.
+                </p>
+                <p>
+                    The badge would raise awareness to the public, requesting they give
+                    vulnerable people distance. It will hopefully also act as a visual reminder
+                    that continues to raise awareness about the need to be vigilant and keep
+                    washing our hands. Many scientists around the globe say keeping at
+                    least <strong>2 metres apart</strong> makes it less likely that someone will be infected by
+                    the virus, as it can be carried in tiny droplets from the nose or mouth
+                    when sneezing or coughing.
+                </p>
+                <p>
+                    We appreciate that social distancing is not ideal, as humans are sociable
+                    beings. But in these worrying times, it could make a difference to
+                    vulnerable people's concerns when out in public places where they can
+                    come into close contact with the public. Especially because, not all
+                    vulnerabilities are obvious or visible.
+                </p>
+            </section>
+        </main>
+    </body>
+</html>
