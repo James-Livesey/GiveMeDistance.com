@@ -33,6 +33,13 @@ main {
     padding-top: 80px;
 }
 
+footer {
+    padding: 10px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    font-size: 12px;
+}
+
 section {
     padding: 10px;
     padding-left: 10vw;
